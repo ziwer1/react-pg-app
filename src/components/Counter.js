@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import pure from 'recompose/pure'
 import styled from 'styled-components'
+import GenericDiv from './GenericDiv'
 
 const Intro = styled.p`
   font-size: large;
@@ -28,6 +29,7 @@ function Counter({
         {' '}
         <button onClick={incrementIfOdd}>Increment if odd</button>
       </p>
+      <GenericDiv/>
     </section>
   )
 }

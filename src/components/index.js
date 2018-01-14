@@ -1,2 +1,7 @@
 export { default as Counter } from './Counter'
 export { default as Header } from './Header'
+export { default as GenericDiv } from './GenericDiv'
+export { default as Category } from './Category'
+export { default as Fish } from './Fish'
+export { default as Tilapia } from './Tilapia'
+export { default as ModalGeneric } from './ModalGeneric'
