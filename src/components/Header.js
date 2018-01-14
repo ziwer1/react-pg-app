@@ -30,7 +30,7 @@ function Header() {
       <NavBar/>
       <TopBar>
         <img src={logo} className="redux-logo" alt="logo" />
-        <h2>Welcome to Redux App</h2>
+        <h2>Welcome to ReactHack App</h2>
       </TopBar>
     </div>
   )
