@@ -32,29 +32,37 @@ class ToDoList extends React.Component {
 
 		});*/
 
-		/*if(this.props.filter == 1){
-			return this.props.listItems.map((listItem) => {
+		let ish;
+
+		if(this.props.filter == 1){
+
+			ish = this.props.listItems.map((listItem) => {
 				if(listItem.completed == false){
-					<ListItem>listItem.item</ListItem>
+					let unique = Math.floor(Math.random() * 1000000);
+					return <ListItem key={unique} id={unique} item={listItem}/>
 				}
 			});
 		}else if(this.props.filter == 2){
-			return this.props.listItems.map((listItem) => {
+			ish = this.props.listItems.map((listItem) => {
 				if(listItem.completed == true){
-					<ListItem>listItem.item</ListItem>
+					let unique = Math.floor(Math.random() * 1000000);
+					return <ListItem key={unique} id={unique} item={listItem}/>
 				}
 			});
 		}else{
-			return this.props.listItems.map((listItem) => {
-				<ListItem>listItem.item</ListItem>
+			ish = this.props.listItems.map((listItem) => {
+				let unique = Math.floor(Math.random() * 1000000);
+				return <ListItem key={unique} id={unique} item={listItem}/>
 			});
-		}*/
-
+		}
+		/*
 		let ish = this.props.listItems.map((listItem) => 
 				<ListItem>{listItem.item}</ListItem>
 			);
+		*/
 
 		return ish;
+		
 
 	}
 
