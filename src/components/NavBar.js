@@ -21,7 +21,7 @@ export default class Example extends React.Component {
       <div>
         <Navbar color="primary" inverse toggleable>
           <NavbarToggler right onClick={this.toggle} />
-          <NavbarBrand tag={Link} to="/">reactstrap</NavbarBrand>
+          <NavbarBrand tag={Link} to="/">reacthack</NavbarBrand>
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
@@ -35,6 +35,9 @@ export default class Example extends React.Component {
               </NavItem>
               <NavItem>
                 <NavLink href="/components/">Components</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink href="/todolist">Todo list</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>

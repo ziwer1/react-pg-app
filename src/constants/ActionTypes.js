@@ -4,3 +4,8 @@ export const DECREMENT_COUNTER = 'DECREMENT_COUNTER'
 
 //UserList
 export const LOAD_USERS = 'LOAD_USERS'
+
+//ToDoList
+export const SELECT_FILTER = 'SELECT_FILTER'
+export const ADD_ITEM = 'ADD_ITEM'
+export const CHECK_UNCHECK_ITEM = 'CHECK_UNCHECK_ITEM'
