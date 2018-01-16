@@ -37,7 +37,7 @@ export default class Example extends React.Component {
                 <NavLink href="/components/">Components</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink href="/todolist">Todo list</NavLink>
+                <NavLink tag={Link} to="/todolist">Todo List</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink href="https://github.com/reactstrap/reactstrap">Github</NavLink>
