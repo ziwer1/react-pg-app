@@ -14,9 +14,9 @@ export default class ListItem extends React.Component{
 
 	renderListItem(){
 		if (this.props.item.completed == false){
-			return <ListGroupItem>&nbsp; <Input type="checkbox" className="float-right" /> &nbsp; {this.props.item.item}&nbsp; {this.props.item.id}</ListGroupItem>
+			return <ListGroupItem onClick={() => this.props.checkUncheckAction(this.props.index)}>&nbsp; <Input type="checkbox" className="float-right" /> &nbsp; {this.props.item.item}&nbsp; {this.props.item.id}</ListGroupItem>
 		}else{
-			return <ListGroupItem>&nbsp; <Input type="checkbox" className="float-right" checked /> &nbsp; <s>{this.props.item.item}&nbsp; {this.props.item.id}</s></ListGroupItem>
+			return <ListGroupItem onClick={() => this.props.checkUncheckAction(this.props.index)}>&nbsp; <Input type="checkbox" className="float-right" checked /> &nbsp; <s>{this.props.item.item}&nbsp; {this.props.item.id}</s></ListGroupItem>
 		}
 	}
 

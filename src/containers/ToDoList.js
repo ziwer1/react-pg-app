@@ -1,6 +1,8 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {Form, Container, Row, Col} from 'reactstrap';
+import {bindActionCreators} from 'redux'
+import {checkUncheckItem, addItem, selectFilter} from '../actions/toDoList.js';
 
 import {ListItem, AddFilter} from 'components';
 
@@ -38,18 +40,18 @@ class ToDoList extends React.Component {
 
 			ish = this.props.listItems.map((listItem, i) => {
 				if(listItem.completed == false){
-					return <ListItem key={listItem.id} index={i} item={listItem}/>
+					return <ListItem key={listItem.id} index={i} item={listItem} checkUncheckAction={this.props.checkUncheck}/>
 				}
 			});
 		}else if(this.props.filter == 2){
 			ish = this.props.listItems.map((listItem, i) => {
 				if(listItem.completed == true){
-					return <ListItem key={listItem.id} index={i} item={listItem}/>
+					return <ListItem key={listItem.id} index={i} item={listItem} checkUncheckAction={this.props.checkUncheck}/>
 				}
 			});
 		}else{
 			ish = this.props.listItems.map((listItem, i) => {
-				return <ListItem key={listItem.id} index={i} item={listItem}/>
+				return <ListItem key={listItem.id} index={i} item={listItem} checkUncheckAction={this.props.checkUncheck}/>
 			});
 		}
 		/*
@@ -70,7 +72,7 @@ class ToDoList extends React.Component {
 		        <Row>
 					<Col md='6'>
 						
-							<AddFilter/>
+							<AddFilter addItemAction={this.props.add} selectFilterAction={this.props.selectFilter}/>
 							{this.renderListItems()}
 						
 					</Col>
@@ -92,4 +94,8 @@ function mapStateToProps(state){
 	};
 }
 
-export default connect(mapStateToProps)(ToDoList);
+function mapDispatchToProps(dispatch){
+	return bindActionCreators({checkUncheck:checkUncheckItem, add:addItem, selectFilter:selectFilter}, dispatch)
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ToDoList);
